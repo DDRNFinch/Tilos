@@ -6,7 +6,6 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait-primary",
   "background_color": "#59bde7",
   "theme_color": "#59bde7",
   "icons": [
@@ -34,5 +33,10 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "prefer_related_applications": false
 }
