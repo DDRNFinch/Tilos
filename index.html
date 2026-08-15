@@ -20,19 +20,19 @@
     #staffApp>.selected-learner,#staffApp>.staff-stats,#staffApp>.staff-actions,#staffApp>.staff-action.compact,#staffApp>.pa-home{display:none!important}
     #settingsButton{display:none!important}
     .staff-mode .app-header{align-items:flex-start!important}
+    .staff-mode .app-brand{display:grid!important;justify-items:start!important;gap:2px!important}
     .staff-mode .header-actions{align-items:flex-start!important}
-    .assessor-header-meta{display:grid;justify-items:end;gap:3px;padding-top:1px}
-    .assessor-label{display:block;font-size:10px;font-weight:850;letter-spacing:.10em;line-height:1.1;color:#718096}
-    .header-utility-actions{display:flex;justify-content:flex-end;gap:13px;white-space:nowrap}
-    .header-utility-actions button{border:0;background:transparent;padding:1px 0;color:#6f797e;font:inherit;font-size:10px;line-height:1.2}
+    .assessor-label{display:block!important;margin-top:4px!important;font-size:10px!important;font-weight:800!important;letter-spacing:.04em!important;line-height:1.15!important;color:#718096!important;text-transform:none!important}
+    .header-utility-actions{display:flex!important;justify-content:flex-start!important;gap:11px!important;white-space:nowrap!important;margin-top:1px!important}
+    .header-utility-actions button{border:0!important;background:transparent!important;padding:1px 0!important;color:#6f797e!important;font:inherit!important;font-size:10px!important;line-height:1.2!important}
     .header-utility-actions button:active{color:#2583a7}
   </style>
-  <meta name="tilos-build" content="41-assessor-header-utilities">
+  <meta name="tilos-build" content="42-left-assessor-utilities">
   <title>Tilos</title>
 </head>
 <body class="staff-mode">
   <main>
-    <header class="app-header"><div class="app-brand"><b class="brand-word" aria-label="Tilos">Til<span class="brand-o" aria-hidden="true">o</span>s</b></div><div class="header-actions"><button id="installApp" class="install-button" type="button">Install</button><button id="settingsButton" class="header-icon" type="button" aria-label="Assessor profile and settings" hidden>i</button><div class="assessor-header-meta"><small class="assessor-label">ASSESSOR</small><nav class="header-utility-actions" aria-label="Tilos help and assessor profile"><button type="button" data-v33-help>Help / Tilos</button><button type="button" data-v33-profile>Edit profile</button></nav></div></div></header>
+    <header class="app-header"><div class="app-brand"><b class="brand-word" aria-label="Tilos">Til<span class="brand-o" aria-hidden="true">o</span>s</b><small class="assessor-label">Assessor assistant</small><nav class="header-utility-actions" aria-label="Tilos help and assessor profile"><button type="button" data-v33-help>Help/Tilos</button><button type="button" data-v33-profile>Profile</button></nav></div><div class="header-actions"><button id="installApp" class="install-button" type="button">Install</button><button id="settingsButton" class="header-icon" type="button" aria-label="Assessor profile and settings" hidden>i</button></div></header>
     <section class="progress-panel staff-face-panel" aria-label="Tilos assessor assistant"><div class="home-evia-space"><div class="home-evia-stage"><button class="evia-face" id="eviaFace" type="button" aria-label="Open Tilos assessor assistant"><div class="evia-eyes"><span class="evia-eye eye-left"></span><span class="evia-eye eye-right"></span></div></button></div></div><div class="staff-face-copy"><strong>Assessor</strong><span>Courses · Reviews · Holistic observations</span></div></section>
     <section id="staffApp" aria-live="polite"></section>
   </main>
