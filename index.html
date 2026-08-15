@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#59bde7">
+  <meta name="application-name" content="Tilos">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Tilos">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="staff-style.css">
+  <style id="tilos-round-face-fix">
+    .staff-mode .staff-face-panel .home-evia-space{display:grid!important;place-items:center!important;min-height:132px!important}
+    .staff-mode .staff-face-panel .home-evia-stage{position:relative!important;display:grid!important;place-items:center!important;width:130px!important;height:130px!important;min-width:130px!important;max-width:130px!important;min-height:130px!important;max-height:130px!important;aspect-ratio:1/1!important;margin:0 auto!important;flex:none!important}
+    .staff-mode .staff-face-panel .home-evia-stage>#eviaFace.evia-face{position:relative!important;inset:auto!important;width:104px!important;height:104px!important;min-width:104px!important;max-width:104px!important;min-height:104px!important;max-height:104px!important;aspect-ratio:1/1!important;box-sizing:border-box!important;padding:0!important;margin:0!important;border-radius:50%!important;flex:0 0 104px!important;align-self:center!important;justify-self:center!important}
+    #staffApp>.selected-learner,#staffApp>.staff-stats,#staffApp>.staff-actions,#staffApp>.staff-action.compact,#staffApp>.pa-home{display:none!important}
+    #settingsButton{display:none!important}
+  </style>
+  <meta name="tilos-build" content="40-home-centred-arches-bottom">
+  <title>Tilos</title>
+</head>
+<body class="staff-mode">
+  <main>
+    <header class="app-header"><div class="app-brand"><b class="brand-word" aria-label="Tilos">Til<span class="brand-o" aria-hidden="true">o</span>s</b><small>ASSESSOR · TUTOR</small></div><div class="header-actions"><button id="settingsButton" class="header-icon" type="button" aria-label="Assessor profile and settings" hidden>i</button><button id="installApp" class="install-button" type="button">Install</button></div></header>
+    <section class="progress-panel staff-face-panel" aria-label="Tilos assessor assistant"><div class="home-evia-space"><div class="home-evia-stage"><button class="evia-face" id="eviaFace" type="button" aria-label="Open Tilos assessor assistant"><div class="evia-eyes"><span class="evia-eye eye-left"></span><span class="evia-eye eye-right"></span></div></button></div></div><div class="staff-face-copy"><strong>Assessor · Tutor</strong><span>Courses · Reviews · Holistic observations</span></div></section>
+    <section id="staffApp" aria-live="polite"></section>
+  </main>
+  <section class="evia-overlay" id="tilosOverlay" aria-hidden="true" aria-label="Tilos assessor assistant"><div class="evia-wizard" role="dialog" aria-modal="true" aria-labelledby="tilosPrompt"><div class="evia-toolbar"><span></span><button id="tilosClose" type="button" aria-label="Close Tilos">&#215;</button></div><div class="evia-stage"><div class="evia-face" aria-hidden="true"><div class="evia-eyes"><span class="evia-eye eye-left"></span><span class="evia-eye eye-right"></span></div></div></div><div class="evia-copy" aria-live="polite"><p class="evia-greeting">Tilos</p><h2 id="tilosPrompt">What would you like to do?</h2><p id="tilosHint">Assessor and tutor workspace.</p></div><div id="tilosContent"></div></div></section>
+  <div class="save-toast" id="saveToast" role="status">Saved</div>
+  <script src="../Evia/course-data.js"></script>
+  <script src="../Evia/evia-mapping.js"></script>
+  <script src="../Evia/property-maintenance.js"></script>
+  <script src="../Evia/nvq-trowel.js"></script>
+  <script src="../Evia/nvq-l2-trowel.js"></script>
+  <script src="tilos-courses.js"></script>
+  <script src="evia-animations.js"></script>
+  <script src="staff-store.js"></script>
+  <script src="staff-pdf.js"></script>
+  <script src="staff-app.js"></script>
+  <script src="tilos-guide-v24-human.js?v=40"></script>
+</body>
+</html>
