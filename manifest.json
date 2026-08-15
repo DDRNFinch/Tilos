@@ -1,7 +1,7 @@
 {
-  "name": "Tilos",
-  "short_name": "Tilos",
-  "description": "Tilos assessor and tutor workspace for Bricklayer ST0095 reviews and observations.",
+  "name": "Andros",
+  "short_name": "Andros",
+  "description": "Andros assessor workspace for reviews, observations, planning and learner records.",
   "id": "./",
   "start_url": "./",
   "scope": "./",

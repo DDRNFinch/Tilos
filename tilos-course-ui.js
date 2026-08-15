@@ -5,7 +5,7 @@ if(!S||!T||!app)return;
 let scheduled=false,refreshing=false;
 function text(el,value){if(el&&el.textContent!==value)el.textContent=value}
 function html(el,value){if(el&&el.innerHTML!==value)el.innerHTML=value}
-function coverage(l){try{return T.coverage(l,S.observations(l.id))||{percent:0,count:0,total:0,label:T.isNVQ(l)?'AC coverage':'KSB coverage'}}catch(error){console.error('Tilos coverage failed',error);return{percent:0,count:0,total:0,label:T.isNVQ(l)?'AC coverage':'KSB coverage'}}}
+function coverage(l){try{return T.coverage(l,S.observations(l.id))||{percent:0,count:0,total:0,label:T.isNVQ(l)?'AC coverage':'KSB coverage'}}catch(error){console.error('Andros coverage failed',error);return{percent:0,count:0,total:0,label:T.isNVQ(l)?'AC coverage':'KSB coverage'}}}
 function refresh(){
   if(refreshing)return;
   refreshing=true;
@@ -41,7 +41,7 @@ function refresh(){
         const b=document.createElement('button');b.type='button';b.dataset.observationPack=id;b.textContent='ZIP';box.insertBefore(b,pdf);
       }
     });
-  }catch(error){console.error('Tilos course UI refresh failed',error)}finally{refreshing=false}
+  }catch(error){console.error('Andros course UI refresh failed',error)}finally{refreshing=false}
 }
 function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;refresh()})}
 app.addEventListener('click',event=>{

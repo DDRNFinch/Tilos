@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const personality = Object.freeze({ role: 'assessor-tutor', motion: 'calm-analytical', accent: 'blue' });
+  const personality = Object.freeze({ role: 'assessor', motion: 'calm-analytical', accent: 'blue' });
   const expressions = ['anim-blink', 'anim-double-blink', 'anim-wink-left', 'anim-wink-right', 'anim-look-left', 'anim-look-right', 'anim-look-up', 'anim-look-down', 'anim-look-up-left', 'anim-look-up-right', 'anim-look-down-left', 'anim-look-down-right', 'anim-smile-eyes', 'anim-squint', 'anim-curious', 'anim-scan', 'anim-nod'];
   const durations = { 'anim-blink': 520, 'anim-double-blink': 920, 'anim-wink-left': 850, 'anim-wink-right': 850, 'anim-smile-eyes': 1150, 'anim-squint': 1200, 'anim-curious': 1400, 'anim-scan': 1650, 'anim-nod': 1050 };
   const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
@@ -87,7 +87,7 @@
     setTimeout(() => target.classList.remove(name), 700);
   }
   function pickMajor() {
-    // Tilos is the assessor/tutor companion: slower, deliberate scanning and acknowledgement rather than playful movement.
+    // Andros is the assessor companion: slower, deliberate scanning and acknowledgement rather than playful movement.
     const pool = mode === 'listening'
       ? ['anim-blink', 'anim-look-down']
       : ['anim-scan', 'anim-nod', 'anim-look-left', 'anim-look-right', 'anim-look-down', 'anim-squint'];
